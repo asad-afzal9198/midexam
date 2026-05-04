@@ -1,0 +1,157 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #0d6efd, #0047ab);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+.form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0a58ca;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* CONTROLS */
+.control-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #0d6efd;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background: #f1f7ff;
+}
+
+/* EMPTY */
+.no-data {
+    text-align: center;
+    color: gray;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+.dark-mode .card {
+    background: #1e1e1e;
+}
+
+.dark-mode table {
+    background: #1e1e1e;
+}
+
+.dark-mode td {
+    border-color: #444;
+}
+
+.dark-mode input,
+.dark-mode select {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* ICON */
+i {
+    margin-right: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .control-group {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}

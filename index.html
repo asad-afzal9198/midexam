@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <h1><i class="fa-solid fa-list-check"></i> Student Task Manager</h1>
+    <p>Organize your assignments efficiently</p>
+
+    <button id="darkModeToggle" class="btn-secondary">🌙 Dark Mode</button>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+    <!-- ADD TASK -->
+    <section class="card">
+        <h2>Add New Task</h2>
+
+        <form id="taskForm" class="form">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+
+            <select id="subject" required>
+                <option value="">Select Subject</option>
+                <option value="Math">Math</option>
+                <option value="CS">Computer Science</option>
+                <option value="English">English</option>
+            </select>
+
+            <input type="date" id="dueDate" required>
+
+            <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Add Task
+            </button>
+        </form>
+    </section>
+
+    <!-- MANAGE -->
+    <section class="card">
+        <h2>Manage Tasks</h2>
+
+        <div class="control-group">
+            <select id="filterSubject">
+                <option value="all">All Subjects</option>
+                <option value="Math">Math</option>
+                <option value="CS">Computer Science</option>
+                <option value="English">English</option>
+            </select>
+
+            <button id="sortBtn" class="btn-secondary">
+                <i class="fa-solid fa-sort"></i> Sort by Date
+            </button>
+        </div>
+    </section>
+
+    <!-- TASK LIST -->
+    <section class="card">
+        <h2>Your Tasks</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Subject</th>
+                    <th>Due Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="taskList"></tbody>
+        </table>
+    </section>
+
+    <!-- API -->
+    <section class="card">
+        <h2>API Tasks</h2>
+        <ul id="apiData"></ul>
+    </section>
+
+</main>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
